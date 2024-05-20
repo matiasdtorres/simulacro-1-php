@@ -106,6 +106,30 @@ if(isset($_GET["get"]))
         echo json_encode($lista, JSON_PRETTY_PRINT);
     }
 
+    //e- El listado de ventas por vaso  Cucurucho.
+    if(isset($_GET["vaso"]))
+    {
+        $vaso = $_GET["vaso"];
+        if ($vaso == "cucurucho") {
+            $ventas = array();
+            if (file_exists("./ventas.json"))
+            {
+                $ventas = json_decode(file_get_contents("./ventas.json"), true);
+            }
+            $lista = array();
+            foreach ($ventas as $venta)
+            {
+                if ($venta["vaso"] == $vaso)
+                {
+                    array_push($lista, $venta);
+                }
+            }
+            echo json_encode($lista, JSON_PRETTY_PRINT);
+        } else {
+            echo "tiene que ser cucurucho";
+        }
+    }
+
 }
 
 
