@@ -44,6 +44,27 @@ if(isset($_GET["get"]))
         }
     }
     echo $cantidad;
+
+    //b- El listado de ventas de un usuario  ingresado.
+    if(isset($_GET["usuario"]))
+    {
+        $usuario = $_GET["usuario"];
+        $ventas = array();
+        if (file_exists("./ventas.json"))
+        {
+            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+        }
+        $lista = array();
+        foreach ($ventas as $venta)
+        {
+            if ($venta["email"] == $usuario)
+            {
+                array_push($lista, $venta);
+            }
+        }
+        echo json_encode($lista, JSON_PRETTY_PRINT);
+    }
+
 }
 
 
