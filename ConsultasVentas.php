@@ -65,6 +65,27 @@ if(isset($_GET["get"]))
         echo json_encode($lista, JSON_PRETTY_PRINT);
     }
 
+    //c- El listado de ventas entre dos fechas ordenado por  nombre.
+    if(isset($_GET["fecha1"]) && isset($_GET["fecha2"]))
+    {
+        $fecha1 = $_GET["fecha1"];
+        $fecha2 = $_GET["fecha2"];
+        $ventas = array();
+        if (file_exists("./ventas.json"))
+        {
+            $ventas = json_decode(file_get_contents("./ventas.json"), true);
+        }
+        $lista = array();
+        foreach ($ventas as $venta)
+        {
+            if ($venta["fecha"] >= $fecha1 && $venta["fecha"] <= $fecha2)
+            {
+                array_push($lista, $venta);
+            }
+        }
+        echo json_encode($lista, JSON_PRETTY_PRINT);
+    }
+
 }
 
 

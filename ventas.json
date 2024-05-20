@@ -18,5 +18,25 @@
         "stock": "1",
         "imagen": "americana_crema_cucurucho_hola_20-05-2024_.png",
         "fecha": "20-05-2024"
+    },
+    {
+        "id": 2,
+        "email": "matias",
+        "sabor": "americana",
+        "tipo": "crema",
+        "vaso": "cucurucho",
+        "stock": "1",
+        "imagen": "americana_crema_cucurucho_matias_20-05-2024_.png",
+        "fecha": "17-05-2024"
+    },
+    {
+        "id": 3,
+        "email": "towers",
+        "sabor": "americana",
+        "tipo": "crema",
+        "vaso": "cucurucho",
+        "stock": "1",
+        "imagen": "americana_crema_cucurucho_towers_20-05-2024_.png",
+        "fecha": "18-05-2024"
     }
 ]
