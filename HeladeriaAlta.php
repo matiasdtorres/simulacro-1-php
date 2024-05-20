@@ -34,7 +34,7 @@ if (isset($_POST["sabor"]) && isset($_POST["precio"]) && isset($_POST["tipo"]) &
     $helados = array();
     if (file_exists("./heladeria.json"))
     {
-        $helados = json_decode(file_get_contents("./heladeria.json"), true);
+        $helados = json_decode(file_get_contents("./heladeria.json", JSON_PRETTY_PRINT), true);
     }
 
     foreach ($helados as &$helado)
@@ -61,14 +61,14 @@ if (isset($_POST["sabor"]) && isset($_POST["precio"]) && isset($_POST["tipo"]) &
             "tipo" => $tipo,
             "vaso" => $vaso,
             "stock" => $stock,
-            "imagen" => $sabor . $tipo . ".png"
+            "imagen" => $sabor ."_". $tipo . ".png"
         );
         $helados[] = $helado;
     }
 
     file_put_contents("./heladeria.json", json_encode($helados, JSON_PRETTY_PRINT));
 
-    $imagen_path = "./ImagenesDeHelados/2024/" . $sabor . $tipo . ".png";
+    $imagen_path = "./ImagenesDeHelados/2024/" . $sabor ."_". $tipo . ".png";
     move_uploaded_file($imagen["tmp_name"], $imagen_path);
 
     echo "helado actualizado/agregado";

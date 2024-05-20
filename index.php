@@ -28,11 +28,14 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
         case "POST":
             switch ($_POST["post"])
             {
-                case "alta":
+                case "altahelado":
                     require_once "./HeladeriaAlta.php";
                     break;
-                case "consulta":
+                case "consultahelado":
                     require_once "./HeladoConsultar.php";
+                    break;
+                case "altaventa":
+                    require_once "./AltaVenta.php";
                     break;
                 default:
                     echo "tipo no permitido";

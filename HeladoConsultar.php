@@ -11,7 +11,7 @@ if (isset($_POST["sabor"]) && isset($_POST["tipo"]))
     $sabor = $_POST["sabor"];
     $tipo = $_POST["tipo"];
 
-    $helados = json_decode(file_get_contents("./heladeria.json"), true);
+    $helados = json_decode(file_get_contents("./heladeria.json", JSON_PRETTY_PRINT), true);
 
     foreach ($helados as $helado)
     {
