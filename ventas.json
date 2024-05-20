@@ -5,6 +5,16 @@
         "sabor": "americana",
         "tipo": "crema",
         "vaso": "cucurucho",
+        "stock": "19",
+        "imagen": "americana_crema_cucurucho_hola_20-05-2024_.png",
+        "fecha": "19-05-2024"
+    },
+    {
+        "id": 1,
+        "email": "hola",
+        "sabor": "americana",
+        "tipo": "crema",
+        "vaso": "cucurucho",
         "stock": "1",
         "imagen": "americana_crema_cucurucho_hola_20-05-2024_.png",
         "fecha": "20-05-2024"
