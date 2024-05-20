@@ -37,6 +37,9 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
                 case "altaventa":
                     require_once "./AltaVenta.php";
                     break;
+                case "devolverhelado":
+                    require_once "./DevolverHelado.php";
+                    break;
                 default:
                     echo "tipo no permitido";
                     break;
@@ -46,6 +49,7 @@ if(isset($_GET["get"]) || isset($_POST["post"]))
                 echo "metodo no permitido";
                 break;
         }
+        
 }
 else
 {

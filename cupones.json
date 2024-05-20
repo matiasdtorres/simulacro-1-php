@@ -1,0 +1,12 @@
+[
+    {
+        "pedido": "1",
+        "porcentajeDescuento": 10,
+        "estado": "no usado"
+    },
+    {
+        "pedido": "3",
+        "porcentajeDescuento": 10,
+        "estado": "no usado"
+    }
+]
