@@ -1,0 +1,11 @@
+[
+    {
+        "id": 0,
+        "sabor": "hola",
+        "precio": "15",
+        "tipo": "agua",
+        "vaso": "cucurucho",
+        "stock": "15",
+        "imagen": "holaagua.png"
+    }
+]

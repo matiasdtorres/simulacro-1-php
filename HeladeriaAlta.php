@@ -42,7 +42,7 @@ if (isset($_POST["sabor"]) && isset($_POST["precio"]) && isset($_POST["tipo"]) &
         if ($helado["sabor"] == $sabor && $helado["tipo"] == $tipo)
         {
             $helado["precio"] = $precio;
-            $helado["stock"] += $stock;
+            $helado["stock"] = $stock;
             $actualizado = true;
             break;
         }
